@@ -1,4 +1,4 @@
-#!pip install kagglehub[pandas-datasets] -q
+!pip install kagglehub[pandas-datasets] -q
 import numpy as np
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import EarlyStopping
@@ -25,23 +25,21 @@ df = kagglehub.load_dataset(
   # documenation for more information:
   # https://github.com/Kaggle/kagglehub/blob/main/README.md#kaggledatasetadapterpandas
 )
-# Cleaning the dataset, which involves removing irrelevant values in the 'city' column
-irrelevant_cities = ['M.Tech', '3.0', "'Less than 5 Kalyan'", 'ME', 'M.Com', "'Less Delhi'", 'City']
-df = df[~df['City'].isin(irrelevant_cities)].copy()
-df = df.reset_index(drop=True)
 
 #Encoding categorical features
 numerical_features = [
-    "CGPA", "Academic Pressure", "Study Satisfaction", "Work/Study Hours", "Financial Stress"
+    "Age", "CGPA", "Academic Pressure", "Study Satisfaction", "Work/Study Hours", "Financial Stress"
 ]
-#Normalizing numerical feature
+
 df[numerical_features] = df[numerical_features].replace('?', np.nan)
 df = df.dropna(subset=numerical_features)
 df[numerical_features] = df[numerical_features].astype(float)
+
+#Normalizing numerical feature
 scaler = StandardScaler()
 df[numerical_features] = scaler.fit_transform(df[numerical_features])
 
-#Numerical input
+#Numerical input entry points
 numerical_input = Input(shape=(len(numerical_features),), name='numerical_input')
 
 
@@ -53,7 +51,6 @@ def LabelEncoding(df,column):
 
 Categorical_features = {
     "Gender": df["Gender"].nunique(),
-    "City": df["City"].nunique(),
     "Sleep Duration": df["Sleep Duration"].nunique(),
     "Dietary Habits": df["Dietary Habits"].nunique(),
     "Degree": df["Degree"].nunique(),
@@ -69,7 +66,7 @@ inputs.append(numerical_input)
 #Add embedding layers to categorical inputs
 embeddings = []
 
-
+#Creating categorical features inputs and attaching each with an embedding layer
 for feature_name in Categorical_features:
     input_layer = Input(shape=(1,), name=f'{feature_name}_input')
     embedding_layer = Embedding(input_dim=Categorical_features[feature_name] + 1, output_dim=4)(input_layer)
@@ -90,12 +87,12 @@ model = Model(inputs=inputs, outputs=output)
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 y = df['Depression'].values
-
+#Categorical X
 X_categorical = []
 for feature in Categorical_features:
   X_categorical.append(df[feature].values.reshape(-1, 1))
 
-# Numerical inputs
+# Numerical X
 X_num = df[numerical_features].values
 
 # Combine all inputs
@@ -120,7 +117,6 @@ history = model.fit(
     callbacks=[early_stop],
     verbose=1
 )
-
 
 plot_model(model, to_file='model.png', show_shapes=True, show_layer_names=True)
 
