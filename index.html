@@ -1172,22 +1172,22 @@
                     name: 'Academic Performance',
                     value: input.CGPA,
                     display: `${input.CGPA}/10.0`,
-                    risk: input.CGPA < 7.5 ? 'negative' : 'positive',
-                    threshold: 7.5
+                    risk: input.CGPA < 5.0 ? 'negative' : 'positive',
+                    threshold: 5.0
                 },
                 {
                     name: 'Sleep Quality',
                     value: input.Sleep_Duration,
                     display: getSleepDurationText(input.Sleep_Duration),
-                    risk: input.Sleep_Duration < 2 ? 'negative' : 'positive',
+                    risk: (input.Sleep_Duration == 2 || input.Sleep_Duration == 0) ? 'negative' : 'positive',
                     threshold: 2
                 },
                 {
                     name: 'Dietary Habits',
                     value: input.Dietary_Habits,
                     display: getDietaryHabitsText(input.Dietary_Habits),
-                    risk: input.Dietary_Habits < 1 ? 'negative' : 'positive',
-                    threshold: 1
+                    risk: input.Dietary_Habits == 3 ? 'negative' : 'positive',
+                    threshold: 3
                 },
                 {
                     name: 'Financial Stress',
