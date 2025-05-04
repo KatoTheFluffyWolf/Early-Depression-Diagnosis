@@ -1307,7 +1307,7 @@
         
         function getDietaryHabitsText(value) {
             const dietOptions = ['Healthy', 'Moderate','Others', 'Unhealthy'];
-            return dietOptions[value] || 'Unknown';
+            return dietOptions[parseInt(value)] || 'Unknown';
         }
         
         // Share results functionality
