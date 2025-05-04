@@ -1246,14 +1246,14 @@
             });
             
             // Recommendations based on specific factors
-            if (input.Sleep_Duration < 2) {
+            if (input.Sleep_Duration == 2 || input.Sleep_Duration == 0)  {
                 recommendations.push({
                     icon: 'fas fa-bed',
                     text: 'Improve sleep hygiene by maintaining a regular sleep schedule and aiming for 7-9 hours of sleep per night.'
                 });
             }
             
-            if (input.Dietary_Habits < 1) {
+            if (input.Dietary_Habits == 3) {
                 recommendations.push({
                     icon: 'fas fa-apple-alt',
                     text: 'Enhance nutrition with regular balanced meals that include whole foods, lean proteins, and plenty of fruits and vegetables.'
@@ -1302,7 +1302,7 @@
         // Helper functions for text display
         function getSleepDurationText(value) {
             const sleepOptions = ['5-6 hours', '7-8 hours', 'Less than 5 hours', 'More than 8 hours', 'Others'];
-            return sleepOptions[value] || 'Unknown';
+            return sleepOptions[parseInt(value)] || 'Unknown';
         }
         
         function getDietaryHabitsText(value) {
