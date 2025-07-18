@@ -11,7 +11,7 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 - 🌐 Web interface with visualized results and recommendations
 - 🔌 REST API via FastAPI for model predictions
 - 📈 Dashboard with confidence score and risk visualization
-- 🏫 Designed for research at University of Greenwich (Vietnam campus)
+- 🏫 Designed for research at FPT University of Greenwich (Can Tho campus)
 
 ---
 
@@ -19,11 +19,11 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 
 - Inputs: 
   - Numerical: Age, CGPA, Academic Pressure, Study Satisfaction, etc.
-  - Categorical: Gender, Sleep Duration, Dietary Habits, Degree, etc.
+  - Categorical: Sleep Duration, Dietary Habits, Degree, etc.
 - Architecture:
   - Embedding layers for categorical inputs
   - Dense layers with ReLU activations
-  - Sigmoid output for binary classification
+  - Sigmoid output for binary classification  
 - Optimizer: Adam  
 - Loss: Binary Crossentropy  
 - EarlyStopping for regularization
@@ -55,11 +55,11 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 - Preprocessing:
   - Missing value handling
   - Standardization for numerical features
-  - Label encoding for categorical variables
+  - Label encoding for categorical features
 
 ---
 
-## 🖼 Interface Preview
+## 🖼 Model's architecture
 
 ![Screenshot](model_architecture.png)
 
