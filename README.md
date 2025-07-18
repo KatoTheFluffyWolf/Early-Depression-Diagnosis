@@ -40,8 +40,7 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 ├── Depression_dectection.h5 # Saved trained model
 ├── model_architecture.png # Neural network diagram
 ├── requirements.txt # Backend dependencies
-├── student_depression_dataset.csv # Source dataset, available at: https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset/data
-
+├── student_depression_dataset.csv # Source dataset
 
 ---
 
