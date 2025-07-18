@@ -32,7 +32,6 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 
 ---
 
-## 🗂 Project Structure  
 .
 ├── index.html                    # Frontend UI
 ├── model_api.py                 # FastAPI backend for model serving
@@ -41,6 +40,7 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 ├── model_architecture.png       # Neural network diagram
 ├── requirements.txt             # Backend dependencies
 ├── student_depression_dataset.csv # Source dataset
+
 
 
 ---
