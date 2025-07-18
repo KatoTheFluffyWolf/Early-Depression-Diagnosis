@@ -59,7 +59,7 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 
 ---
 
-## 🖼 Model's architecture
+## 🖼 Web Application Interface Overview
 
 ![Screenshot](model_architecture.png)
 
@@ -84,9 +84,11 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 
 ## 👥 Team
 
-- Nguyen Duy Anh  
-- Nguyen Trung Hau  
-- Supervisors: Nguyen Kim Khanh, Nguyen Thanh Hai
+- Duy Anh Nguyen. GitHub: https://github.com/KatoTheFluffyWolf  
+- Trung Hau Nguyen. GitHub: https://github.com/Guerfu  
+- Hoang Khoa Trinh. GitHub: https://github.com/trinhkhoa  
+- Supervisor 1: Kim Khanh Nguyen (FPT University of Greenwich)  
+- Supervisor 2: Nguyen Thanh Hai (Can Tho University)   
 
 ---
 
