@@ -31,7 +31,7 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 ![Model Architecture](model_architecture.png)
 
 ---
-
+## 📁 Project Structure  
 .  
 ├── index.html # Frontend UI  
 ├── model_api.py # FastAPI backend for model serving  
