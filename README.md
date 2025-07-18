@@ -32,7 +32,7 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 
 ---
 
-.
+.  
 ├── index.html # Frontend UI  
 ├── model_api.py # FastAPI backend for model serving  
 ├── DepressionDetection_code.py # Model training script  
