@@ -33,13 +33,13 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 ---
 
 .
-├── index.html # Frontend UI
-├── model_api.py # FastAPI backend for model serving
-├── DepressionDetection_code.py # Model training script
-├── Depression_dectection.h5 # Saved trained model
-├── model_architecture.png # Neural network diagram
-├── requirements.txt # Backend dependencies
-├── student_depression_dataset.csv # Source dataset
+├── index.html # Frontend UI  
+├── model_api.py # FastAPI backend for model serving  
+├── DepressionDetection_code.py # Model training script  
+├── Depression_dectection.h5 # Saved trained model  
+├── model_architecture.png # Neural network diagram  
+├── requirements.txt # Backend dependencies  
+├── student_depression_dataset.csv # Source dataset  
 
 
 
