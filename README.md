@@ -61,8 +61,8 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 
 ## 🖼 Web Application Interface Overview
 
-![Screenshot](model_architecture.png)
-
+![Screenshot](UI_overview1.png)
+![Screenshot](UI_overview2.png)
 ---
 
 ## 🔍 How It Works
