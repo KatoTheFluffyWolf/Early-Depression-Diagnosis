@@ -33,7 +33,6 @@ A web-based tool powered by a Multi-Layer Perceptron (MLP) model that predicts t
 ---
 
 ## 🗂 Project Structure
-
 .
 ├── index.html # Frontend UI
 ├── model_api.py # FastAPI backend for model serving
